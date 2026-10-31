@@ -103,10 +103,14 @@ function Hero({ profile, resumeHref }: HeroProps) {
                   py: '10px',
                   border: '1px solid #131313',
                   borderRadius: 0,
-                  color: '#131313',
+                  color: '#fff',
+                  backgroundColor: '#131313',
                   fontSize: 14,
                   fontWeight: 500,
-                  '&:hover': { borderColor: '#131313' },
+                  '&:hover': {
+                    borderColor: '#131313',
+                    backgroundColor: '#131313',
+                  },
                 },
               }}
             >
@@ -120,46 +124,6 @@ function Hero({ profile, resumeHref }: HeroProps) {
             </Box>
           </Box>
         </Box>
-      </Box>
-      <Box
-        component="span"
-        sx={{
-          position: 'absolute',
-          zIndex: 2,
-          right: { xs: 12, sm: 55, lg: '10%' },
-          bottom: { xs: 18, sm: 30, lg: 28 },
-          display: 'inline-flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          width: { xs: 'auto', lg: 171 },
-          height: { xs: 'auto', lg: 50 },
-          boxSizing: 'border-box',
-          px: { xs: '14px', lg: '20px' },
-          color: '#fff',
-          backgroundColor: '#039754',
-          borderRadius: '60px',
-          fontSize: { xs: 13, sm: 14, lg: 18 },
-          fontWeight: 500,
-          lineHeight: { xs: '20px', lg: '30px' },
-          py: { xs: '8px', lg: '10px' },
-          '& svg': {
-            position: 'absolute',
-            left: -13,
-            top: -12,
-            color: '#039754',
-            width: 24,
-            height: 24,
-            transform: 'rotate(-18deg)',
-          },
-        }}
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M3.3 2.2 20.7 9.7c.8.35.75 1.5-.08 1.8l-6.42 2.35-2.35 6.42c-.3.83-1.45.88-1.8.08L2.2 3.3c-.35-.8.3-1.45 1.1-1.1Z"
-            fill="#039754"
-          />
-        </svg>
-        {profile.role}
       </Box>
     </Box>
   )

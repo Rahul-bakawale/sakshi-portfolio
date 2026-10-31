@@ -123,7 +123,14 @@ function PdfPreview({ src, title }: PdfPreviewProps) {
       }}
     >
       {isLoading && (
-        <Stack alignItems="center" justifyContent="center" spacing={2} sx={{ minHeight: '100%' }}>
+        <Stack
+          spacing={2}
+          sx={{
+            minHeight: '100%',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
           <CircularProgress size={28} aria-label="Loading PDF" />
           <Typography sx={{ color: 'text.secondary', fontSize: 13 }}>Loading document…</Typography>
         </Stack>

@@ -85,8 +85,8 @@ function ProjectCard({
         fullWidth
         maxWidth="lg"
         aria-labelledby={`case-study-title-${label.replace(/\s+/g, '-').toLowerCase()}`}
-        PaperProps={{
-          sx: {
+        sx={{
+          '& .MuiDialog-paper': {
             border: 0,
             outline: 0,
             boxShadow: 'none',
