@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import type { PDFPageProxy } from 'pdfjs-dist'
 
 export interface Profile {
   name: string
@@ -57,7 +58,7 @@ export interface AppButtonProps {
 export interface AppImageProps {
   src: string
   alt: string
-  aspectRatio?: string
+  aspectRatio?: string | { xs?: string; sm?: string; md?: string; lg?: string; xl?: string }
   objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down'
   borderRadius?: number | string
 }
@@ -67,8 +68,17 @@ export interface ProjectCardProps {
   title: string
   description: string
   image: string
-  link: string
   imageAlt: string
+}
+
+export interface PdfPreviewProps {
+  src: string
+  title: string
+}
+
+export interface PdfPageProps {
+  page: PDFPageProxy
+  pageNumber: number
 }
 
 export interface SectionTitleProps {

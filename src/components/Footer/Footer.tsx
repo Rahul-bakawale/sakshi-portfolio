@@ -1,42 +1,16 @@
 import { Box, Container, Divider, Grid, Link, Typography } from '@mui/material'
+import emailIcon from '../../assets/images/email.png'
+import phoneIcon from '../../assets/images/phone-call.png'
 import type { FooterProps } from '../../types'
 import SocialLinks from '../common/SocialLinks'
 
 function Footer({ profile, socials }: FooterProps) {
   return (
-    <Box component="footer" sx={{ position: 'relative', overflow: 'hidden', backgroundColor: '#161616', color: '#fff' }}>
-      <Box
-        aria-hidden="true"
-        sx={{
-          position: 'absolute',
-          top: -230,
-          left: -150,
-          width: 400,
-          height: 400,
-          border: '18px solid #292929',
-          borderRadius: '50%',
-          display: { xs: 'none', sm: 'block' },
-        }}
-      />
-      <Box
-        aria-hidden="true"
-        sx={{
-          position: 'absolute',
-          top: -210,
-          right: -210,
-          width: 390,
-          height: 390,
-          border: '18px solid #292929',
-          borderRadius: '50%',
-          display: { xs: 'none', sm: 'block' },
-        }}
-      />
+    <Box component="footer" sx={{ backgroundColor: '#161616', color: '#fff' }}>
       <Container
         maxWidth={false}
         sx={{
           maxWidth: 1220,
-          position: 'relative',
-          zIndex: 1,
           px: { xs: 2, sm: 3 },
           py: { xs: 6, sm: 8, md: 10 },
         }}
@@ -74,15 +48,36 @@ function Footer({ profile, socials }: FooterProps) {
             <Typography sx={{ mb: 2, fontSize: 13, fontWeight: 700 }}>
               Currently Open for Work
             </Typography>
-            <Box sx={{ display: 'grid', gap: 1.25 }}>
+            <Box sx={{ display: 'grid', gap: 2 }}>
               <Link
                 href={`mailto:${profile.email}`}
                 underline="hover"
-                sx={{ color: '#e5e5e5', fontSize: 13, overflowWrap: 'anywhere' }}
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 2,
+                  color: '#e5e5e5',
+                  fontSize: 18,
+                  lineHeight: 1.6,
+                  overflowWrap: 'anywhere',
+                }}
               >
+                <Box component="img" src={emailIcon} alt="" aria-hidden="true" sx={{ width: 32, height: 32, flex: '0 0 32px' }} />
                 {profile.email}
               </Link>
-              <Link href={`tel:${profile.phone.replace(/[^\d+]/g, '')}`} underline="hover" sx={{ color: '#e5e5e5', fontSize: 13 }}>
+              <Link
+                href={`tel:${profile.phone.replace(/[^\d+]/g, '')}`}
+                underline="hover"
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 2,
+                  color: '#e5e5e5',
+                  fontSize: 18,
+                  lineHeight: 1.6,
+                }}
+              >
+                <Box component="img" src={phoneIcon} alt="" aria-hidden="true" sx={{ width: 32, height: 32, flex: '0 0 32px' }} />
                 {profile.phone}
               </Link>
             </Box>

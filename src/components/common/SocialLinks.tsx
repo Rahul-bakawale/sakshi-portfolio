@@ -1,4 +1,6 @@
 import { Box, Chip } from '@mui/material'
+import behanceIcon from '../../assets/images/behance.png'
+import linkedInIcon from '../../assets/images/linkedin.png'
 import type { SocialLinksProps } from '../../types'
 
 function SocialLinks({ socials, dark = false }: SocialLinksProps) {
@@ -14,33 +16,32 @@ function SocialLinks({ socials, dark = false }: SocialLinksProps) {
           aria-label={`Visit ${social.label} profile (opens in a new tab)`}
           icon={
             <Box
-              component="span"
+              component="img"
+              src={social.icon === 'linkedin' ? linkedInIcon : behanceIcon}
+              alt=""
               aria-hidden="true"
               sx={{
-                display: 'inline-flex',
-                width: 16,
-                height: 16,
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: social.icon === 'linkedin' ? '2px' : '50%',
-                color: '#fff',
-                backgroundColor: social.icon === 'linkedin' ? '#0A66C2' : '#1769FF',
-                fontSize: social.icon === 'linkedin' ? 10 : 8,
-                fontWeight: 800,
-                letterSpacing: '-0.04em',
+                display: 'block',
+                width: 32,
+                height: 32,
+                objectFit: 'contain',
               }}
-            >
-              {social.icon === 'linkedin' ? 'in' : 'Be'}
-            </Box>
+            />
           }
           label={social.label}
           clickable
           size="small"
           sx={{
-            height: 32,
+            height: 40,
+            px: 0.25,
             color: dark ? '#f5f5f5' : '#161616',
             backgroundColor: dark ? '#292929' : '#fff',
-            '& .MuiChip-icon': { ml: 1 },
+            fontSize: 18,
+            fontWeight: 400,
+            lineHeight: 1.6,
+            letterSpacing: 0,
+            '& .MuiChip-icon': { ml: 1, mr: 1 },
+            '& .MuiChip-label': { px: 1 },
             '&:hover': { backgroundColor: dark ? '#373737' : '#f1f1f1' },
           }}
         />

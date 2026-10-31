@@ -33,7 +33,7 @@ function AppButton({
         fontWeight: 600,
         lineHeight: 1.2,
         '& .MuiButton-endIcon': { ml: 0.75 },
-        '& .MuiSvgIcon-root': { fontSize: 15 },
+        '& .MuiSvgIcon-root': { width: 24, height: 24, fontSize: 24 },
         '&:hover': {
           borderColor: '#161616',
           backgroundColor: variant === 'contained' ? '#333' : 'rgba(22, 22, 22, 0.04)',

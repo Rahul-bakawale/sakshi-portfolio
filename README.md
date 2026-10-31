@@ -21,4 +21,5 @@ npm run preview
 - **Resume:** Replace `src/assets/resume/Sakshi_Gupta_Resume.pdf` with the final PDF, keeping the filename or updating the import in `src/App.tsx`.
 - **Profile and gallery images:** Replace `src/assets/photo.jpg` and the image URLs in `src/data/portfolio.json`. Project and gallery image URLs are placeholders; local files can be added under `src/assets/images/` and referenced from the JSON.
 - **Social and case-study links:** Update the `socials` and `projects` entries in `src/data/portfolio.json`. Update the email and phone in `profile` there as well.
+- **Case study preview:** “View Case Study” opens the resume PDF in a view-only popup for testing. Replace the PDF import in `src/components/common/ProjectCard.tsx` when project-specific case study PDFs are ready.
 - **Portfolio copy and content:** Edit `src/data/portfolio.json` to change the profile, about text, project descriptions, and gallery items. Keep the data in sync with the interfaces in `src/types/index.ts`.

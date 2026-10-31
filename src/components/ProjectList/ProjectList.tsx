@@ -17,7 +17,6 @@ function ProjectList({ projects }: ProjectListProps) {
             title={project.title}
             description={project.description}
             image={project.image}
-            link={project.caseStudyUrl}
             imageAlt={`${project.title} project preview`}
           />
         ))}
