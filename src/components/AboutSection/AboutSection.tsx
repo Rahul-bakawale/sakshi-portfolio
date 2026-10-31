@@ -4,7 +4,7 @@ import SectionTitle from '../common/SectionTitle'
 
 function AboutSection({ about }: AboutSectionProps) {
   return (
-    <Box component="section" aria-labelledby="about-title" sx={{ pb: { xs: 7, md: 10 } }}>
+    <Box component="section" aria-labelledby="about-title" sx={{ pb: { xs: 7, md: 8 } }}>
       <Box id="about-title" sx={{ mb: 2.5 }}>
         <SectionTitle title="More About Me" />
       </Box>
@@ -20,9 +20,9 @@ function AboutSection({ about }: AboutSectionProps) {
       >
         <Typography
           sx={{
-            fontSize: { xs: 15, sm: 18, md: 21 },
+            fontSize: { xs: 15, sm: 18 },
             color: '#373737',
-            lineHeight: 1.9,
+            lineHeight: 1.6,
             textAlign: { xs: 'left', sm: 'center' },
           }}
         >

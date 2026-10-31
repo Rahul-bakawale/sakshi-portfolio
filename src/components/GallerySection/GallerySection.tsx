@@ -25,7 +25,7 @@ function GallerySection({ gallery }: GallerySectionProps) {
       <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3.5 }}>
         <AppButton
           label="View More"
-          href="https://www.behance.net/"
+          href="https://www.behance.net/sakshigupta46"
           target="_blank"
           variant="outlined"
         />

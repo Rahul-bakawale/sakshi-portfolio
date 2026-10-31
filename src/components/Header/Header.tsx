@@ -1,8 +1,8 @@
-import { AppBar, Box, Container, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Container, Toolbar } from '@mui/material'
 import type { HeaderProps } from '../../types'
 import SocialLinks from '../common/SocialLinks'
 
-function Header({ name, socials }: HeaderProps) {
+function Header({ socials }: HeaderProps) {
   return (
     <AppBar
       component="header"
@@ -12,7 +12,6 @@ function Header({ name, socials }: HeaderProps) {
         backgroundColor: 'rgba(255, 247, 238, 0.92)',
         color: 'text.primary',
         backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid rgba(22, 22, 22, 0.06)',
       }}
     >
       <Container maxWidth={false} sx={{ maxWidth: 1220, px: { xs: 2, sm: 3 } }}>
@@ -21,30 +20,10 @@ function Header({ name, socials }: HeaderProps) {
           sx={{
             minHeight: { xs: 'auto', sm: 76 },
             py: { xs: 1.5, sm: 0 },
-            flexDirection: { xs: 'column', sm: 'row' },
-            alignItems: { xs: 'stretch', sm: 'center' },
-            justifyContent: 'space-between',
-            gap: { xs: 1.5, sm: 2 },
+            justifyContent: 'flex-end',
           }}
         >
-          <Box>
-            <Typography
-              component="a"
-              href="#top"
-              aria-label={`${name}, home`}
-              sx={{
-                color: 'inherit',
-                fontSize: { xs: 16, sm: 18 },
-                fontWeight: 800,
-                letterSpacing: '-0.05em',
-                textDecoration: 'none',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              {name}
-            </Typography>
-          </Box>
-          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: { xs: 'flex-end', sm: 'flex-start' }, gap: 1 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 1 }}>
             <SocialLinks socials={socials} />
           </Box>
         </Toolbar>

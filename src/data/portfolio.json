@@ -18,6 +18,11 @@
       "label": "LinkedIn",
       "url": "https://www.linkedin.com/in/sakshi-gupta-aaa874192/",
       "icon": "linkedin"
+    },
+    {
+      "label": "Dribbble",
+      "url": "https://dribbble.com/",
+      "icon": "dribbble"
     }
   ],
   "about": {

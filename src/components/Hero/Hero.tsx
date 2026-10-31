@@ -10,7 +10,7 @@ function Hero({ profile, resumeHref }: HeroProps) {
       id="top"
       sx={{
         position: 'relative',
-        pt: { xs: 3, sm: 5, lg: '128px' },
+        pt: { xs: 3, sm: 5, lg: '40px' },
         pb: { xs: 6, sm: 8, md: 9 },
       }}
     >

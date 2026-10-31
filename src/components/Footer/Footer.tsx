@@ -1,4 +1,4 @@
-import { Box, Container, Divider, Grid, Link, Typography } from '@mui/material'
+import { Box, Container, Grid, Link, Typography } from '@mui/material'
 import emailIcon from '../../assets/images/email.png'
 import phoneIcon from '../../assets/images/phone-call.png'
 import type { FooterProps } from '../../types'
@@ -6,7 +6,7 @@ import SocialLinks from '../common/SocialLinks'
 
 function Footer({ profile, socials }: FooterProps) {
   return (
-    <Box component="footer" sx={{ backgroundColor: '#161616', color: '#fff' }}>
+    <Box component="footer" sx={{ backgroundColor: '#131313', color: '#fff' }}>
       <Container
         maxWidth={false}
         sx={{
@@ -38,7 +38,7 @@ function Footer({ profile, socials }: FooterProps) {
         <Grid
           container
           sx={{
-            maxWidth: 960,
+            maxWidth: 1200,
             mx: 'auto',
             border: '1px solid #363636',
             backgroundColor: 'rgba(255, 255, 255, 0.035)',
@@ -91,12 +91,21 @@ function Footer({ profile, socials }: FooterProps) {
             }}
           >
             <Typography sx={{ mb: 2, fontSize: 13, fontWeight: 700 }}>Connect on socials</Typography>
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+            <Box
+              sx={{
+                display: 'flex',
+                flexWrap: 'nowrap',
+                gap: 1,
+                overflowX: 'auto',
+                '& .MuiChip-root': { flexShrink: 0 },
+                scrollbarWidth: 'none',
+                '&::-webkit-scrollbar': { display: 'none' },
+              }}
+            >
               <SocialLinks socials={socials} dark />
             </Box>
           </Grid>
         </Grid>
-        <Divider sx={{ display: { xs: 'none', md: 'block' }, maxWidth: 960, mx: 'auto', mt: 5, borderColor: '#292929' }} />
       </Container>
     </Box>
   )

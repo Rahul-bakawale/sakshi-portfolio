@@ -86,7 +86,6 @@ export interface SectionTitleProps {
 }
 
 export interface HeaderProps {
-  name: string
   socials: SocialLink[]
 }
 

@@ -1,5 +1,6 @@
 import { Box, Chip } from '@mui/material'
 import behanceIcon from '../../assets/images/behance.png'
+import dribbbleIcon from '../../assets/images/dribbble.png'
 import linkedInIcon from '../../assets/images/linkedin.png'
 import type { SocialLinksProps } from '../../types'
 
@@ -17,7 +18,13 @@ function SocialLinks({ socials, dark = false }: SocialLinksProps) {
           icon={
             <Box
               component="img"
-              src={social.icon === 'linkedin' ? linkedInIcon : behanceIcon}
+              src={
+                social.icon === 'linkedin'
+                  ? linkedInIcon
+                  : social.icon === 'dribbble'
+                    ? dribbbleIcon
+                    : behanceIcon
+              }
               alt=""
               aria-hidden="true"
               sx={{

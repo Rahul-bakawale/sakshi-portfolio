@@ -12,7 +12,7 @@ import portfolio from './data/portfolio.json'
 function App() {
   return (
     <Box sx={{ overflow: 'hidden' }}>
-      <Header name={portfolio.profile.name} socials={portfolio.socials} />
+      <Header socials={portfolio.socials} />
       <main>
         <Box component="section" aria-label="Introduction">
           <Container
