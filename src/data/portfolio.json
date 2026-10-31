@@ -1,0 +1,92 @@
+{
+  "profile": {
+    "name": "Sakshi Gupta",
+    "role": "UX/UI Designer",
+    "intro": "I create intuitive digital experiences that solve user needs through thoughtful design and seamless interactions.",
+    "photo": "/src/assets/photo.jpg",
+    "resumeUrl": "Sakshi_Gupta_Resume.pdf",
+    "email": "sakshi.gupta@example.com",
+    "phone": "+91 98765 43210"
+  },
+  "socials": [
+    {
+      "label": "Behance",
+      "url": "https://www.behance.net/",
+      "icon": "behance"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/",
+      "icon": "linkedin"
+    }
+  ],
+  "about": {
+    "text": "With a passion for design and emerging technology, I explore new ways to bring ideas to life. By combining UX thinking, visual storytelling, and AI-powered workflows, I create digital experiences that are thoughtful, adaptable, and ready for what’s next."
+  },
+  "projects": [
+    {
+      "id": "vintavia",
+      "label": "PROJECT 1",
+      "title": "Vintavia - AI-Powered Travel",
+      "description": "An AI-powered travel planning experience that transforms travel ideas into personalized itineraries. Users can generate trip plans based on their preferences, explore destinations, and organize their travel experiences through one intuitive platform.",
+      "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=85",
+      "caseStudyUrl": "https://www.behance.net/"
+    },
+    {
+      "id": "hirepay",
+      "label": "PROJECT 2",
+      "title": "HirePay - Recruitment Platform",
+      "description": "A recruitment platform designed to simplify the hiring journey for both job seekers and recruiters. With dedicated user experiences, HirePay makes it easier to discover opportunities, manage applications, and streamline the recruitment process through intuitive digital interfaces.",
+      "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85",
+      "caseStudyUrl": "https://www.behance.net/"
+    },
+    {
+      "id": "tem",
+      "label": "PROJECT 3",
+      "title": "TEM - Experiential Platform",
+      "description": "A digital platform designed to help visitors discover immersive experiences, explore sensory activations, and book their visits effortlessly. The platform combines an engaging website with an intuitive management system to support bookings, content, and operational workflows.",
+      "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=85",
+      "caseStudyUrl": "https://www.behance.net/"
+    },
+    {
+      "id": "au-bank",
+      "label": "PROJECT 4",
+      "title": "AU Bank - Mobile Banking App Redesign",
+      "description": "A conceptual redesign of the AU Small Finance Bank mobile application, focused on simplifying everyday banking experiences through intuitive navigation, improved information hierarchy, and a cleaner interface. The redesigned experience makes banking tasks more accessible, seamless, and user-friendly.",
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85",
+      "caseStudyUrl": "https://www.behance.net/"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gallery-1",
+      "image": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=800&q=85",
+      "alt": "Golden sunrise over a green landscape"
+    },
+    {
+      "id": "gallery-2",
+      "image": "https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=800&q=85",
+      "alt": "Friends sharing a joyful moment outdoors"
+    },
+    {
+      "id": "gallery-3",
+      "image": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=85",
+      "alt": "Colorful flowers in soft natural light"
+    },
+    {
+      "id": "gallery-4",
+      "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=85",
+      "alt": "Mountain landscape beneath a bright sky"
+    },
+    {
+      "id": "gallery-5",
+      "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=85",
+      "alt": "Portrait of a woman smiling in warm light"
+    },
+    {
+      "id": "gallery-6",
+      "image": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=85",
+      "alt": "Peaceful lake and mountains at sunset"
+    }
+  ]
+}
