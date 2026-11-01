@@ -61,7 +61,8 @@ function Footer({ profile, socials }: FooterProps) {
             </Typography>
             <Box sx={{ display: 'grid', gap: 2 }}>
               <Link
-                href={`mailto:${profile.email}`}
+                href={`mailto:${profile.email}?subject=${encodeURIComponent('Portfolio inquiry')}`}
+                aria-label={`Send an email to ${profile.email}`}
                 underline="hover"
                 sx={{
                   display: 'flex',
@@ -78,6 +79,7 @@ function Footer({ profile, socials }: FooterProps) {
               </Link>
               <Link
                 href={`tel:${profile.phone.replace(/[^\d+]/g, '')}`}
+                aria-label={`Call ${profile.phone}`}
                 underline="hover"
                 sx={{
                   display: 'flex',

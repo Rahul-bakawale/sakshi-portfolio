@@ -33,7 +33,7 @@ function App() {
   }, [])
 
   return (
-    <Box sx={{ overflow: 'hidden' }}>
+    <Box sx={{ overflowX: 'clip' }}>
       <Header socials={portfolio.socials} />
       <main>
         <Box component="section" aria-label="Introduction">

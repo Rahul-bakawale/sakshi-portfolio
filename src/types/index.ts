@@ -81,10 +81,6 @@ export interface PdfPageProps {
   pageNumber: number
 }
 
-export interface SectionTitleProps {
-  title: string
-}
-
 export interface HeaderProps {
   socials: SocialLink[]
 }

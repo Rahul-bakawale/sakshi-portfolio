@@ -1,7 +1,7 @@
-import { Box, Grid, Typography } from '@mui/material'
-import type { GallerySectionProps } from '../../types'
-import AppButton from '../common/AppButton'
-import AppImage from '../common/AppImage'
+import { Box, Grid, Typography } from "@mui/material";
+import type { GallerySectionProps } from "../../types";
+import AppButton from "../common/AppButton";
+import AppImage from "../common/AppImage";
 
 function GallerySection({ gallery }: GallerySectionProps) {
   return (
@@ -9,13 +9,13 @@ function GallerySection({ gallery }: GallerySectionProps) {
       component="section"
       aria-labelledby="gallery-title"
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
+        display: "flex",
+        flexDirection: "column",
         gap: 2.5,
         pb: { xs: 8, md: 11 },
-        width: { xl: 'calc(100% + 68px)' },
+        width: { xl: "calc(100% + 68px)" },
         maxWidth: 1240,
-        ml: { xl: '-34px' },
+        ml: { xl: "-34px" },
       }}
     >
       <Typography
@@ -23,15 +23,15 @@ function GallerySection({ gallery }: GallerySectionProps) {
         component="h2"
         sx={{
           m: 0,
-          color: '#131313',
+          color: "#131313",
           fontSize: { xs: 28, sm: 36, lg: 48 },
           fontWeight: 600,
           lineHeight: 1.6,
-          letterSpacing: '-0.03em',
-          textAlign: 'center',
+          letterSpacing: "-0.03em",
+          textAlign: "center",
         }}
       >
-        Beyond the Interface.
+        Beyond the Interface
       </Typography>
       <Grid container spacing={2.5}>
         {gallery.map((item) => (
@@ -47,16 +47,16 @@ function GallerySection({ gallery }: GallerySectionProps) {
       </Grid>
       <Box
         sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          '& .MuiButton-root.MuiButton-outlined': {
+          display: "flex",
+          justifyContent: "center",
+          "& .MuiButton-root.MuiButton-outlined": {
             width: 184,
             height: 55,
             minHeight: 55,
-            px: '30px',
-            py: '10px',
-            gap: '10px',
-            border: '1px solid #131313',
+            px: "30px",
+            py: "10px",
+            gap: "10px",
+            border: "1px solid #131313",
             borderRadius: 0,
           },
         }}
@@ -69,7 +69,7 @@ function GallerySection({ gallery }: GallerySectionProps) {
         />
       </Box>
     </Box>
-  )
+  );
 }
 
-export default GallerySection
+export default GallerySection;
