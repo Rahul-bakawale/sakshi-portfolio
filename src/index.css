@@ -11,6 +11,49 @@
   scroll-behavior: smooth;
 }
 
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+html:hover,
+html:focus-within,
+html:active,
+html[data-scrolling='true'] {
+  scrollbar-color: rgb(19 19 19 / 50%) transparent;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  background-clip: padding-box;
+}
+
+html:hover::-webkit-scrollbar-thumb,
+html:focus-within::-webkit-scrollbar-thumb,
+html:active::-webkit-scrollbar-thumb,
+html[data-scrolling='true']::-webkit-scrollbar-thumb {
+  background-color: rgb(19 19 19 / 50%);
+}
+
+html::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 * {
   box-sizing: border-box;
 }

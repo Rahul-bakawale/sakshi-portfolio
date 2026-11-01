@@ -3,10 +3,10 @@ import { createTheme } from '@mui/material/styles'
 export const theme = createTheme({
   palette: {
     mode: 'light',
-    primary: { main: '#161616' },
+    primary: { main: '#131313' },
     secondary: { main: '#00A651' },
     background: { default: '#FFF7EE', paper: '#FFFFFF' },
-    text: { primary: '#161616', secondary: '#575757' },
+    text: { primary: '#131313', secondary: '#575757' },
   },
   typography: {
     fontFamily: "'Manrope', sans-serif",

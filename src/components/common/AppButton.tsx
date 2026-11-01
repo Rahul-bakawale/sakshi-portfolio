@@ -28,15 +28,16 @@ function AppButton({
         px: 2,
         borderRadius: '2px',
         borderColor: '#777',
-        color: variant === 'contained' ? '#fff' : '#161616',
+        color: variant === 'contained' ? '#fff' : 'primary.main',
         fontSize: 12,
         fontWeight: 600,
         lineHeight: 1.2,
         '& .MuiButton-endIcon': { ml: 0.75 },
         '& .MuiSvgIcon-root': { width: 24, height: 24, fontSize: 24 },
         '&:hover': {
-          borderColor: '#161616',
-          backgroundColor: variant === 'contained' ? '#333' : 'rgba(22, 22, 22, 0.04)',
+          borderColor: 'primary.main',
+          backgroundColor: '#131313',
+          color: '#fff',
         },
       }}
     >

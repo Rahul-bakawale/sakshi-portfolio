@@ -1,29 +1,60 @@
 import { Box, Typography } from '@mui/material'
 import type { AboutSectionProps } from '../../types'
-import SectionTitle from '../common/SectionTitle'
 
 function AboutSection({ about }: AboutSectionProps) {
   return (
-    <Box component="section" aria-labelledby="about-title" sx={{ pb: { xs: 7, md: 8 } }}>
-      <Box id="about-title" sx={{ mb: 2.5 }}>
-        <SectionTitle title="More About Me" />
-      </Box>
+    <Box
+      component="section"
+      aria-labelledby="about-title"
+      sx={{
+        width: '100%',
+        maxWidth: 1270,
+        mx: 'auto',
+        pb: { xs: 7, md: 8 },
+        '@media (min-width: 1536px)': {
+          width: 'calc(100% + 98px)',
+          ml: '-49px',
+        },
+      }}
+    >
+      <Typography
+        id="about-title"
+        component="h2"
+        sx={{
+          mb: '20px',
+          color: 'text.primary',
+          fontSize: { xs: 28, sm: 36, lg: 48 },
+          fontWeight: 600,
+          lineHeight: 1.6,
+          letterSpacing: '-0.03em',
+          textAlign: 'center',
+        }}
+      >
+        More About Me
+      </Typography>
       <Box
         sx={{
-          maxWidth: 900,
-          mx: 'auto',
-          px: { xs: 2.5, sm: 4, md: 5 },
-          py: { xs: 2.5, sm: 3.5, md: 4 },
-          backgroundColor: '#fff',
-          borderRadius: 1,
+          width: '100%',
+          minHeight: { lg: 465 },
+          display: 'flex',
+          alignItems: 'center',
+          px: { xs: 3, sm: 5, lg: '55px' },
+          py: { xs: 3, sm: 4, lg: '40px' },
+          backgroundColor: 'background.paper',
+          borderRadius: 0,
         }}
       >
         <Typography
           sx={{
-            fontSize: { xs: 15, sm: 18 },
-            color: '#373737',
+            width: '100%',
+            maxWidth: 1160,
+            mx: 'auto',
+            color: 'text.secondary',
+            fontSize: { xs: 18, sm: 24, lg: 48 },
+            fontWeight: 400,
             lineHeight: 1.6,
-            textAlign: { xs: 'left', sm: 'center' },
+            letterSpacing: 0,
+            textAlign: 'left',
           }}
         >
           {about.text}

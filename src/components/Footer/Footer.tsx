@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Link, Typography } from '@mui/material'
-import emailIcon from '../../assets/images/email.png'
-import phoneIcon from '../../assets/images/phone-call.png'
+import emailIcon from '../../assets/icons/email.svg'
+import phoneIcon from '../../assets/icons/PhoneCall.svg'
 import type { FooterProps } from '../../types'
 import SocialLinks from '../common/SocialLinks'
 
@@ -10,12 +10,21 @@ function Footer({ profile, socials }: FooterProps) {
       <Container
         maxWidth={false}
         sx={{
-          maxWidth: 1220,
+          maxWidth: 1920,
           px: { xs: 2, sm: 3 },
           py: { xs: 6, sm: 8, md: 10 },
         }}
       >
-        <Typography sx={{ textAlign: 'center', fontSize: { xs: 15, sm: 18 }, color: '#f1f1f1' }}>
+        <Typography
+          sx={{
+            textAlign: 'center',
+            fontSize: { xs: 22, sm: 32, md: 40, lg: 48 },
+            fontWeight: 400,
+            lineHeight: 1.1,
+            letterSpacing: '-0.02em',
+            color: '#f1f1f1',
+          }}
+        >
           Ready for the work?
         </Typography>
         <Typography
@@ -23,14 +32,16 @@ function Footer({ profile, socials }: FooterProps) {
           sx={{
             mt: 1,
             mb: { xs: 4, md: 5 },
-            background: 'linear-gradient(90deg, #fff 20%, #8e8e8e 100%)',
+            background: 'linear-gradient(93.93deg, #FFFFFF 35.88%, #999999 93.36%)',
             backgroundClip: 'text',
             color: 'transparent',
-            fontSize: { xs: 58, sm: 84, md: 120 },
+            fontSize: { xs: 58, sm: 84, md: 120, lg: 'clamp(120px, 15.1vw, 290px)' },
             fontWeight: 700,
-            lineHeight: 1.05,
-            letterSpacing: '-0.07em',
+            lineHeight: 1.1,
+            letterSpacing: '-0.02em',
             textAlign: 'center',
+            whiteSpace: 'nowrap',
+            width: '100%',
           }}
         >
           Let&apos;s Talk

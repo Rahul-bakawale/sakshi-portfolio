@@ -1,5 +1,5 @@
 import CloseIcon from '@mui/icons-material/Close'
-import { Box, Dialog, DialogContent, DialogTitle, Grid, IconButton, Typography } from '@mui/material'
+import { Box, Dialog, DialogContent, DialogTitle, IconButton, Typography } from '@mui/material'
 import { useState } from 'react'
 import resumePdf from '../../assets/resume/Sakshi_Gupta_Resume.pdf?url'
 import AppButton from './AppButton'
@@ -21,38 +21,64 @@ function ProjectCard({
       <Box
         component="article"
         sx={{
-          p: { xs: 2, sm: 2.5, md: 3 },
+          minHeight: { xl: 597 },
+          p: { xs: 2, sm: 2.5, lg: '32px' },
           backgroundColor: 'background.paper',
-          borderRadius: 1,
+          borderRadius: 0,
           position: 'relative',
         }}
       >
-        <Grid container columnSpacing={{ xs: 0, md: 4 }} rowSpacing={{ xs: 2, md: 0 }}>
-          <Grid size={{ xs: 12, md: 6 }} sx={{ order: { xs: 0, md: 1 } }}>
+        <Box
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: {
+              xs: 'minmax(0, 1fr)',
+              md: 'repeat(2, minmax(0, 1fr))',
+              xl: '536px 578px',
+            },
+            columnGap: { md: 4, xl: '62px' },
+            height: { lg: 533 },
+            minHeight: { xs: 0, xl: 533 },
+            justifyContent: { xl: 'space-between' },
+            alignItems: 'stretch',
+            rowGap: { xs: 2, md: 0 },
+          }}
+        >
+          <Box sx={{ order: { xs: 0, md: 1, xl: 2 }, minWidth: 0 }}>
             <AppImage
               src={image}
               alt={imageAlt}
-              aspectRatio="1.22 / 1"
-              borderRadius={1}
+              aspectRatio={{ xs: '1.22 / 1', xl: '578 / 533' }}
+              borderRadius={0}
             />
-          </Grid>
-          <Grid
-            size={{ xs: 12, md: 6 }}
-            sx={{ order: { xs: 1, md: 0 }, display: 'flex', flexDirection: 'column' }}
+          </Box>
+          <Box
+            sx={{
+              order: { xs: 1, md: 0, xl: 1 },
+              display: 'flex',
+              flexDirection: 'column',
+              minWidth: 0,
+            }}
           >
             <Typography
               component="p"
-              sx={{ color: 'text.secondary', fontSize: 9, fontWeight: 600, letterSpacing: '0.04em' }}
+              sx={{
+                m: 0,
+                color: 'text.secondary',
+                fontSize: { xs: 14, xl: 20 },
+                fontWeight: 400,
+                lineHeight: 1.6,
+              }}
             >
               {label}
             </Typography>
             <Typography
               component="h3"
               sx={{
-                mt: 1,
-                fontSize: { xs: 18, sm: 20 },
-                fontWeight: 700,
-                lineHeight: 1.3,
+                m: 0,
+                fontSize: { xs: 22, sm: 26, xl: 32 },
+                fontWeight: 600,
+                lineHeight: 1.6,
                 letterSpacing: '-0.03em',
               }}
             >
@@ -60,15 +86,42 @@ function ProjectCard({
             </Typography>
             <Typography
               sx={{
-                mt: 1.25,
+                m: 0,
                 color: 'text.secondary',
-                fontSize: { xs: 12, sm: 13 },
-                lineHeight: 1.75,
+                fontSize: { xs: 15, xl: 18 },
+                fontWeight: 400,
+                lineHeight: 1.6,
               }}
             >
               {description}
             </Typography>
-            <Box sx={{ mt: { xs: 2, md: 'auto' }, pt: { md: 2 } }}>
+            <Box
+              sx={{
+                mt: { xs: 2, md: 'auto' },
+                pt: { md: 2 },
+                '& .MuiButton-root': {
+                  width: { xs: 'auto', sm: 239 },
+                  minHeight: 55,
+                  px: '30px',
+                  py: '10px',
+                  gap: '10px',
+                  border: '1px solid',
+                  borderColor: 'primary.main',
+                  borderRadius: 0,
+                  color: 'primary.main',
+                  backgroundColor: 'background.paper',
+                  fontSize: 18,
+                  fontWeight: 600,
+                  lineHeight: 1.2,
+                  '& .MuiButton-endIcon': { ml: 0 },
+                  '&:hover': {
+                    borderColor: 'primary.main',
+                    backgroundColor: 'primary.main',
+                    color: '#fff',
+                  },
+                },
+              }}
+            >
               <AppButton
                 label="View Case Study"
                 onClick={() => setDialogOpen(true)}
@@ -76,8 +129,8 @@ function ProjectCard({
                 ariaLabel={`View ${title} case study PDF`}
               />
             </Box>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Box>
       <Dialog
         open={dialogOpen}

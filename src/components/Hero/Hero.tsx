@@ -10,8 +10,7 @@ function Hero({ profile, resumeHref }: HeroProps) {
       id="top"
       sx={{
         position: 'relative',
-        pt: { xs: 3, sm: 5, lg: '40px' },
-        pb: { xs: 6, sm: 8, md: 9 },
+        pb: { xs: 6, md: 9 },
       }}
     >
       <Box
@@ -26,7 +25,7 @@ function Hero({ profile, resumeHref }: HeroProps) {
             ml: '-24px',
           },
           p: { xs: 2, sm: 3, md: '30px' },
-          backgroundColor: '#fff',
+          backgroundColor: 'background.paper',
           borderRadius: 0,
         }}
       >
@@ -50,16 +49,17 @@ function Hero({ profile, resumeHref }: HeroProps) {
           <Box
             sx={{
               minWidth: 0,
-              minHeight: { lg: 342 },
+              alignSelf: { lg: 'start' },
+              mt: { lg: '210px' },
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'center',
             }}
           >
             <Typography
               component="p"
               sx={{
-                color: '#575757',
+                m: 0,
+                color: 'text.primary',
                 fontSize: { xs: 36, sm: 52, lg: 75 },
                 fontWeight: 400,
                 lineHeight: 1.1,
@@ -71,7 +71,7 @@ function Hero({ profile, resumeHref }: HeroProps) {
             <Typography
               component="h1"
               sx={{
-                mt: 0.5,
+                m: 0,
                 fontSize: { xs: 38, sm: 54, lg: 75 },
                 fontWeight: 800,
                 lineHeight: 1.1,
@@ -83,9 +83,9 @@ function Hero({ profile, resumeHref }: HeroProps) {
             </Typography>
             <Typography
               sx={{
-                mt: { xs: 2, lg: 2.5 },
+                mt: { xs: 2, lg: 2 },
                 maxWidth: 531,
-                color: '#575757',
+                color: 'text.secondary',
                 fontSize: { xs: 16, lg: 18 },
                 lineHeight: 1.6,
                 letterSpacing: 0,
@@ -95,21 +95,26 @@ function Hero({ profile, resumeHref }: HeroProps) {
             </Typography>
             <Box
               sx={{
-                mt: { xs: 3, lg: 4 },
+                mt: { xs: 3, lg: '45px' },
                 '& .MuiButton-root': {
                   width: { xs: 'auto', sm: 255 },
                   minHeight: 55,
-                  px: { xs: 2, sm: '30px' },
+                  px: '30px',
                   py: '10px',
-                  border: '1px solid #131313',
+                  border: '1px solid',
+                  borderColor: 'primary.main',
                   borderRadius: 0,
-                  color: '#fff',
-                  backgroundColor: '#131313',
-                  fontSize: 14,
-                  fontWeight: 500,
+                  color: 'primary.main',
+                  backgroundColor: 'background.paper',
+                  gap: '10px',
+                  fontSize: 18,
+                  fontWeight: 600,
+                  lineHeight: 1.2,
+                  '& .MuiButton-endIcon': { ml: 0 },
                   '&:hover': {
-                    borderColor: '#131313',
-                    backgroundColor: '#131313',
+                    borderColor: 'primary.main',
+                    backgroundColor: 'primary.main',
+                    color: '#fff',
                   },
                 },
               }}
